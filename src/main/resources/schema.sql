@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS positions (
+  id BIGSERIAL PRIMARY KEY,
+  symbol TEXT NOT NULL UNIQUE,
+  quantity INT NOT NULL
+);
