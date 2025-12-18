@@ -3,7 +3,10 @@ package nl.northernlogic.portfoliodashboard;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Table;
 
-@Table("positions")
+import lombok.Value;
+
+@Table
+@Value
 public class Position {
 
     @Id
@@ -11,24 +14,4 @@ public class Position {
 
     private String symbol;
     private int quantity;
-
-    public Position() {
-    }
-
-    public Position(String symbol, int quantity) {
-        this.symbol = symbol;
-        this.quantity = quantity;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getSymbol() {
-        return symbol;
-    }
-
-    public int getQuantity() {
-        return quantity;
-    }
 }

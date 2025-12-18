@@ -3,9 +3,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/portfolio_dashboard
     username: pd_user
     password: pd_pass
+  flyway:
+    enabled: true
   sql:
     init:
-      mode: always
-      schema-locations: classpath:schema.sql
-      data-locations: classpath:data.sql
+      mode: never
 
